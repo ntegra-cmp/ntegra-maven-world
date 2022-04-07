@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>NtegraMavenWorldsGroup</groupId>
   <artifactId>NtegraMavenWorlds</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>war</packaging>
   <name>NtegraMavenWorlds</name>
   <dependencies>
@@ -78,6 +78,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
-    <finalName>stsarabia.ntegra.webapps.ntegramavenwolrd</finalName>
+    <finalName>NtegraMavenWorlds_${project.version}_${build.number}</finalName>
   </build>
 </project>
