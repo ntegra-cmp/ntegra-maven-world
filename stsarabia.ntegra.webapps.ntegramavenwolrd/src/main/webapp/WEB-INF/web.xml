@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>HelloWolrdServlet</servlet-name>
+  	<display-name>HelloWolrdServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.stsarabia.ntegra.web.tools.HelloWolrdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HelloWolrdServlet</servlet-name>
+  	<url-pattern>/HelloWolrdServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

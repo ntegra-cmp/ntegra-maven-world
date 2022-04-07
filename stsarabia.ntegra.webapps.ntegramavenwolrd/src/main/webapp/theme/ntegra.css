@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+
+body {
+ background-color:#007B8B;
+ color:#FFFFFF;
+ font-family: sans-serif;
+ margin: 25px 25px 25px 25px;
+}
+.headerlogo{
+	background-image:url("../images/ntegralogo_gray.png");
+	background-repeat: no-repeat;
+	background-size: 25%;
+	background-position: right;
+	height: 140px;
+	
+}
