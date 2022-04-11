@@ -27,6 +27,6 @@ def specVersion = manifest.getMainAttributes().getValue(Attributes.Name.SPECIFIC
 println "Artifact version is $version"
 build.addAction(
         new ParametersAction([
-                new StringParameterValue("ARTIFACT_VERSION", version),
+                new StringParameterValue("ARTIFACT_VERSION", specVersion+"_"+implVersion),
         ])
 )
