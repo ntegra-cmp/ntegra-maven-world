@@ -12,7 +12,7 @@
     }
   </pre>
  */
-import hudson.model.*
+import jenkins.model.*
 import java.util.jar.*
 def build = Thread.currentThread().executable
 
