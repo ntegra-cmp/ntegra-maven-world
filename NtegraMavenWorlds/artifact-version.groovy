@@ -12,6 +12,11 @@
     }
   </pre>
  */
+ 
+ dependencies {
+  compile 'org.codehaus.groovy:groovy-all:2.4.15'
+}
+
 import jenkins.model.*
 import java.util.jar.*
 def build = Thread.currentThread().executable
