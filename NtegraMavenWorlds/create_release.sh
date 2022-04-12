@@ -8,7 +8,7 @@ tag=$(git describe --tags)
 # Get the full message associated with this tag
 message="$(git for-each-ref refs/tags/$tag --format='%(contents)')"
 artifactfile=$POM_ARTIFACTID"_"$POM_VERSION"_"$BUILD_NUMBER.$POM_PACKAGING
-echo "Artifcat Filename : $POM_ARTIFACTID"
+echo "Artifcat Filename : $artifactfile"
 filelcation=`pwd`
 echo "Artifcat File Location: $filelcation"  
 # Get the title and the description as separated variables
