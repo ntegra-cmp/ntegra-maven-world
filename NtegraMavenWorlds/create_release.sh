@@ -1,7 +1,7 @@
 export
 # Publish on github
 echo "Publishing on Github..."
-token="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"
+token=$NTGERAGITPUBLISHER
 # Get the last tag name
 tag=$(git describe --tags)
 # Get the full message associated with this tag
