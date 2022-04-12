@@ -78,6 +78,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
-    <finalName>NtegraMavenWorlds_${project.version}_${build.number}</finalName>
+    <finalName>NtegraMavenWorlds_${project.version}</finalName>
   </build>
 </project>
