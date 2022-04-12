@@ -31,7 +31,7 @@ def implVersion = manifest.getMainAttributes().getValue(Attributes.Name.IMPLEMEN
 def specVersion = manifest.getMainAttributes().getValue(Attributes.Name.SPECIFICAION_VERSION)
 println "Artifact version is $version"
 build.addAction(
-        new ParametersAction([
-                new StringParameterValue("ARTIFACT_VERSION", specVersion+"_"+implVersion),
+        new hudson.model.ParametersAction([
+                new hudson.model.StringParameterValue("ARTIFACT_VERSION", specVersion+"_"+implVersion),
         ])
 )
