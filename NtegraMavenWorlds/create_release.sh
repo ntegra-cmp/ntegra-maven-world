@@ -7,7 +7,10 @@ token=$NTGERAGITPUBLISHER
 tag=$(git describe --tags)
 # Get the full message associated with this tag
 message="$(git for-each-ref refs/tags/$tag --format='%(contents)')"
-artifactfile=$POM_ARTIFACTID_$POM_VERSION_$BUILD_NUMBER.$POM_PACKAGING
+artifactfile=$POM_ARTIFACTID"_"$POM_VERSION"_"$BUILD_NUMBER.$POM_PACKAGING
+echo "Artifcat Filename : $POM_ARTIFACTID"
+filelcation=`pwd`
+echo "Artifcat File Location: $filelcation"  
 # Get the title and the description as separated variables
 name=$(echo "$message" | head -n1)
 description=$(echo "$message" | tail -n +3)
