@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>NtegraMavenWorldsGroup</groupId>
   <artifactId>NtegraMavenWorlds</artifactId>
-  <version>1.0.0_${jenkin.build.number}</version>
+  <version>1.0.0_${env.jenkin.build.number}</version>
   <packaging>war</packaging>
   <name>NtegraMavenWorlds</name>
   <dependencies>
@@ -30,7 +30,7 @@
   <properties>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
-    <build.number>${jenkin.build.numberr}</build.number>
+    <build.number>${env.jenkin.build.numberr}</build.number>
   </properties>
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
