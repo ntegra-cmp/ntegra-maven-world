@@ -1,5 +1,6 @@
 export
 # Publish on github
+echo " Switching to packaging folder $POM_ARTIFACTID/target"
 cd $POM_ARTIFACTID/target
 echo "Publishing on Github..."
 token=$NTGERAGITPUBLISHER
