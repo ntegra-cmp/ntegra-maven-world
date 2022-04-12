@@ -10,7 +10,8 @@ message="$(git for-each-ref refs/tags/$tag --format='%(contents)')"
 artifactfile=$POM_ARTIFACTID"_"$POM_VERSION"_"$BUILD_NUMBER.$POM_PACKAGING
 echo "Artifcat Filename : $artifactfile"
 filelcation=`pwd`
-echo "Artifcat File Location: $filelcation"  
+echo "Listing File Location: $filelcation"  
+ls -l 
 # Get the title and the description as separated variables
 name=$(echo "$message" | head -n1)
 description=$(echo "$message" | tail -n +3)
