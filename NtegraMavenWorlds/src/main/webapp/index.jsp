@@ -9,7 +9,8 @@ prop.load(getServletContext().getResourceAsStream("/META-INF/MANIFEST.MF"));
 String applVersion = prop.getProperty("Implementation-Version");
 String specVersion = prop.getProperty("Specification-Version");
 String buildTime = prop.getProperty("Build-Time");
-
+java.net.InetAddress ia = java.net.InetAddress.getLocalHost();
+String hostname = ia.getHostName();
 
 %>
     
@@ -32,6 +33,7 @@ String buildTime = prop.getProperty("Build-Time");
 <h3> Version v<%= specVersion %>_b<%= applVersion %></h3>
 
 <h3> Built Time  <%= buildTime %></h3>
+<h3> Server by  <%= hostname %></h3>
 </div>
 
 
