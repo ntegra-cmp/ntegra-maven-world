@@ -11,7 +11,7 @@ String specVersion = prop.getProperty("Specification-Version");
 String buildTime = prop.getProperty("Build-Time");
 java.net.InetAddress ia = java.net.InetAddress.getLocalHost();
 String hostname = ia.getHostName();
-String ipAddress = ia.getHostAddress();
+String ipAddress = request.getLocalAddr();;
 
 %>
     
