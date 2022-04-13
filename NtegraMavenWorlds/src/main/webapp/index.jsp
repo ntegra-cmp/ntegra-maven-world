@@ -6,7 +6,11 @@
 //Get version of application
 java.util.Properties prop = new java.util.Properties();
 prop.load(getServletContext().getResourceAsStream("/META-INF/MANIFEST.MF"));
-String applVersion = prop.getProperty("Implementation-Version"); 
+String applVersion = prop.getProperty("Implementation-Version");
+String specVersion = prop.getProperty("Specification-Version");
+String buildTime = prop.getProperty("Build-Time");
+
+
 %>
     
 <!DOCTYPE html>
@@ -25,7 +29,9 @@ String applVersion = prop.getProperty("Implementation-Version");
 </div>
 
 <div>
-<h3> Build No. is <%= applVersion %></h3>
+<h3> Version v<%= specVersion %>_b<%= applVersion %></h3>
+
+<h3> Built Time  <%= buildTime %></h3>
 </div>
 
 

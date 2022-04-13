@@ -4,7 +4,6 @@ echo " Switching to packaging folder $POM_ARTIFACTID/target"
 cd $POM_ARTIFACTID/target
 echo "Publishing on Github..."
 token=$NTGERAGITPUBLISHER_TOKEN
-echo "MyToken $token"
 # Get the last tag name
 tag=$(git describe --tags)
 # Get the full message associated with this tag
