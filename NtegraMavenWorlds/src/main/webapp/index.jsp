@@ -11,6 +11,7 @@ String specVersion = prop.getProperty("Specification-Version");
 String buildTime = prop.getProperty("Build-Time");
 java.net.InetAddress ia = java.net.InetAddress.getLocalHost();
 String hostname = ia.getHostName();
+String ipAddress = ia.getHostAddress();
 
 %>
     
@@ -33,7 +34,7 @@ String hostname = ia.getHostName();
 <h3> Version v<%= specVersion %>_b<%= applVersion %></h3>
 
 <h3> Built Time  <%= buildTime %></h3>
-<h3> Server by  <%= hostname %></h3>
+<h3> Served by  <%= hostname %> / <%= ipAddress %></h3>
 </div>
 
 
