@@ -27,5 +27,5 @@ echo "Release creation result : $release"
 id=$(echo "$release" | sed -n -e 's/"id":\ \([0-9]\+\),/\1/p' | head -n 1 | sed 's/[[:blank:]]//g')
 echo "Extract Release ID: $id" 
 # Upload the artifact
-DOWNLOAD_URL=$(curl -XPOST -H "Authorization:token $token" -H "Content-Type:application/octet-stream" --data-binary @$artifactfile https://uploads.github.com/repos/ntegra-cmp/ntegra-maven-world/releases/$id/assets?name=$artifactfile | grep browser_download_url  | cut -d '"' -f 4)
+DOWNLOAD_URL=$(curl -XPOST -H "Authorization:token $token" -H "Content-Type:application/octet-stream" --data-binary @$artifactfile https://uploads.github.com/repos/ntegra-cmp/ntegra-maven-world/releases/$id/assets?name=$artifactfile | grep browser_download_url |grep $POM_ARTIFACTID  | cut -d '"' -f 4)
 echo "Download URL: $DOWNLOAD_URL"  
