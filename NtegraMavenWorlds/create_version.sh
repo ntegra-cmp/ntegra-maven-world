@@ -1,4 +1,6 @@
 export
+ls
+pwd
 NTG_DEPLOYTYPE=fetch
 NTG_VERSION=$(cat ntg_build.properties|grep NTG_RELEASE_NAME|cut -d '=' -f 2)
 NTG_FETCHRUL=$(cat ntg_build.properties|grep RELEASE_DOWNLOAD_URL|cut -d '=' -f 2)

@@ -29,8 +29,10 @@ echo "Extract Release ID: $id"
 release_json=$(curl -XPOST -H "Authorization:token $token" -H "Content-Type:application/octet-stream" --data-binary @$artifactfile https://uploads.github.com/repos/ntegra-cmp/ntegra-maven-world/releases/$id/assets?name=$artifactfile)
 echo $release_json
 RELEASE_DOWNLOAD_URL=$(echo $release_json | jq '.browser_download_url')
-echo "Download URL: $DOWNLOAD_URL"
+echo "Download URL: $RELEASE_DOWNLOAD_URL"
 
 # Saving Properties for next scripts
-echo "NTG_RELEASE_NAME=$NTG_RELEASE_NAME" > ntg_build.properties
+echo "NTG_RELEASE_NAME=$name" > ntg_build.properties
 echo "RELEASE_DOWNLOAD_URL=$RELEASE_DOWNLOAD_URL" >> ntg_build.properties
+pwd
+ls
