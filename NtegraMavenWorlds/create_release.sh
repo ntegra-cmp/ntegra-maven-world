@@ -29,5 +29,5 @@ echo "Extract Release ID: $id"
 # Upload the artifact
 release_json=$(curl -XPOST -H "Authorization:token $token" -H "Content-Type:application/octet-stream" --data-binary @$artifactfile https://uploads.github.com/repos/ntegra-cmp/ntegra-maven-world/releases/$id/assets?name=$artifactfile)
 echo $release_json
-DOWNLOAD_URL=$(echo $release_json | jq '.assets.browser_download_url') 
+DOWNLOAD_URL=$(echo $release_json | jq '.browser_download_url') 
 echo "Download URL: $DOWNLOAD_URL"  
