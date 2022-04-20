@@ -32,5 +32,5 @@ RELEASE_DOWNLOAD_URL=$(echo $release_json | jq '.browser_download_url')
 echo "Download URL: $DOWNLOAD_URL"
 
 # Saving Properties for next scripts
-cat "NTG_RELEASE_NAME=$NTG_RELEASE_NAME" > ntg_build.properties
-cat "RELEASE_DOWNLOAD_URL=$RELEASE_DOWNLOAD_URL" >> ntg_build.properties
+echo "NTG_RELEASE_NAME=$NTG_RELEASE_NAME" > ntg_build.properties
+echo "RELEASE_DOWNLOAD_URL=$RELEASE_DOWNLOAD_URL" >> ntg_build.properties
