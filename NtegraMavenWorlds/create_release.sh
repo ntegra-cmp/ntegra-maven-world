@@ -30,7 +30,7 @@ echo "$logSuffix Extract Release ID: $id"
 # Upload the artifact
 release_json=$(curl -XPOST -H "Authorization:token $token" -H "Content-Type:application/octet-stream" --data-binary @$artifactfile https://uploads.github.com/repos/ntegra-cmp/ntegra-maven-world/releases/$id/assets?name=$artifactfile)
 echo "$logSuffix $release_json"
-RELEASE_DOWNLOAD_URL=$(echo $release_json | jq '.browser_download_url')
+RELEASE_DOWNLOAD_URL=$(echo $release_json | jq -r '.browser_download_url')
 echo "$logSuffix Download URL: $RELEASE_DOWNLOAD_URL"
 
 # Saving Properties for next scripts
