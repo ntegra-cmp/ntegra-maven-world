@@ -16,7 +16,6 @@ echo "Listing File Location: $filelcation"
 ls -l 
 # Get the title and the description as separated variables
 name=$(echo "$message" | head -n1)
-export NTG_RELEASE_NAME=$name
 description=$(echo "$message" | tail -n +3)
 description=$(echo "$description" | sed -z 's/\n/\\n/g') # Escape line breaks to prevent json parsing problems
 # Create a release
@@ -29,5 +28,9 @@ echo "Extract Release ID: $id"
 # Upload the artifact
 release_json=$(curl -XPOST -H "Authorization:token $token" -H "Content-Type:application/octet-stream" --data-binary @$artifactfile https://uploads.github.com/repos/ntegra-cmp/ntegra-maven-world/releases/$id/assets?name=$artifactfile)
 echo $release_json
-DOWNLOAD_URL=$(echo $release_json | jq '.browser_download_url') 
-echo "Download URL: $DOWNLOAD_URL"  
+RELEASE_DOWNLOAD_URL=$(echo $release_json | jq '.browser_download_url')
+echo "Download URL: $DOWNLOAD_URL"
+
+# Saving Properties for next scripts
+cat "NTG_RELEASE_NAME=$NTG_RELEASE_NAME" > ntg_build.properties
+cat "RELEASE_DOWNLOAD_URL=$RELEASE_DOWNLOAD_URL" >> ntg_build.properties
