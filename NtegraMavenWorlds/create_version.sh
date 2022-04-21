@@ -9,5 +9,5 @@ echo "$logSuffix NTG_VERSION: $NTG_VERSION"
 echo "$logSuffix NTG_FETCHRUL: $NTG_FETCHRUL" 
 #NTG_ACCESSTOKEN=1500 # read from jenkins build parameters
 #NTG_DEPLOYMENTID=18  # read from jenkins build parameters
-jsonResult=$(curl -XPOST "https://ntegralab.sts-cloud.com/api/deployments/$NTG_DEPLOYMENTID/versions" -H "Authorization: Bearer $NTG_ACCESSTOKEN" -H "Content-Type: application/json" -d "{\"version\": {\"version\": \"$NTG_VERSION\",\"deployType\":\"$NTG_DEPLOYTYPE\",\"fetchUrl\": \"$NTG_FETCHRUL\"}}")
+jsonResult=$(curl -XPOST "$NTG_APISERVERURL/api/deployments/$NTG_DEPLOYMENTID/versions" -H "Authorization: Bearer $NTG_ACCESSTOKEN" -H "Content-Type: application/json" -d "{\"version\": {\"version\": \"$NTG_VERSION\",\"deployType\":\"$NTG_DEPLOYTYPE\",\"fetchUrl\": \"$NTG_FETCHRUL\"}}")
 echo "$logSuffix $jsonResult"
