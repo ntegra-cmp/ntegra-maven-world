@@ -32,7 +32,6 @@ release_json=$(curl -XPOST -H "Authorization:token $token" -H "Content-Type:appl
 echo "$logSuffix $release_json"
 RELEASE_DOWNLOAD_URL=$(echo $release_json | jq -r '.browser_download_url')
 echo "$logSuffix Download URL: $RELEASE_DOWNLOAD_URL"
-
 # Saving Properties for next scripts
 echo "$logSuffix NTG_RELEASE_NAME=$name" > ntg_build.properties
 echo "$logSuffix RELEASE_DOWNLOAD_URL=$RELEASE_DOWNLOAD_URL" >> ntg_build.properties
