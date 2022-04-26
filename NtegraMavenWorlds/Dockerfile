@@ -1,4 +1,4 @@
-FROM tomcat:8.0-alpine
+FROM tomcat:jdk11-openjdk-slim
 ARG artifactfile
 LABEL maintainer="maen.abdeljawwad@stsarabia.com"
 
