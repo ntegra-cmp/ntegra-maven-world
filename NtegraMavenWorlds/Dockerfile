@@ -4,7 +4,7 @@ LABEL maintainer="maen.abdeljawwad@stsarabia.com"
 
 #artifactfile=./$POM_ARTIFACTID/target/$POM_ARTIFACTID"_"$POM_VERSION"_"$BUILD_NUMBER.$POM_PACKAGING
  
-ADD $artifactfile /usr/local/tomcat/webapps/
+ADD $artifactfile /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 
